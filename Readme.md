@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * **[Default.aspx](./CS/T227361/Default.aspx) (VB: [Default.aspx](./VB/T227361/Default.aspx))**
-* [Default.aspx.cs](./CS/T227361/Default.aspx.cs) (VB: [Default.aspx](./VB/T227361/Default.aspx))
+* [Default.aspx.cs](./CS/T227361/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/T227361/Default.aspx.vb))
 <!-- default file list end -->
 # How to print/export XtraReport in an ASP.NET WebForms application without showing a report preview
 

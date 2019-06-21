@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/T227361/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/T227361/Default.aspx.vb))
 <!-- default file list end -->
 # How to print/export XtraReport in an ASP.NET WebForms application without showing a report preview
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t227361/)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to print/export XtraReport without displaying a report preview and using the preview's printing/exporting functionality. </p>

@@ -1,23 +1,25 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128602453/13.2.13%2B)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T227361)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+# Reporting for ASP.NET WebForms - How to print or export a report without showing a preview
 
-* **[Default.aspx](./CS/T227361/Default.aspx) (VB: [Default.aspx](./VB/T227361/Default.aspx))**
-* [Default.aspx.cs](./CS/T227361/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/T227361/Default.aspx.vb))
-<!-- default file list end -->
-# How to print/export XtraReport in an ASP.NET WebForms application without showing a report preview
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128602453/)**
-<!-- run online end -->
+This example demonstrates how to print or export a report in an ASP.NET WebForms application without displaying this report's preview.
+
+![Report Prine or Export Without Preview](Images/screenshot.png)
+
+The report uses one of the **ExportTo...** methods to export a report document to the page's **Response**.
+
+To print the report, export it to the PDF format. Then write the PDF stream to the page's **Response** with the **Content-Disposition** header set to the "inline" value. The browser's built-in PDF viewer opens the PDF file. An alternative method exports the PDF to a separate iframe. In this case, only the print dialog is displayed.
 
 
-<p>This example demonstrates how to print/export XtraReport without displaying a report preview and using the preview's printing/exporting functionality. </p>
-<p>The main idea of this approach is to export XtraReport into the page's Response by using one of its <strong>ExportTo...</strong> methods.<br>To print the report, export it to the PDF format. Then write this PDF to a page's Response with the <strong>Content-Disposition</strong> header set to the "inline" value. In this case, this PDF will be opened by the browser's built-in PDF viewer. To avoid opening the PDF viewer in the browser's window, export the PDF to a separate iframe. In this case, only the print dialog will be displayed.<br><br><strong>See also:</strong><br><a href="https://github.com/DevExpress-Examples/Reporting-Angular-Print-Without-Preview">How to print and export DevExpress reports without previewing them on a web page in an ASP.NET Core Angular application</a><br><a href="https://www.devexpress.com/Support/Center/p/E454">E454: How to print a report without displaying it in a web application</a><br><a href="https://www.devexpress.com/Support/Center/p/T569785">T569785: How to print/export XtraReport in an ASP.NET MVC application without showing a report preview</a></p>
+## Files to Look At
 
-<br/>
+- [Default.aspx.cs](CS/T227361/Default.aspx.cs) (VB: [Default.aspx.vb](VB/T227361/Default.aspx.vb))
 
 
+## Documentation
+
+[Print and Export Reports without a Preview in ASP.NET Web Forms Applications](https://docs.devexpress.com/XtraReports/401846)
+
+## More Examples
+
+* [Reporting for ASP.NET MVC - How to print or export a report without showing a preview](https://github.com/DevExpress-Examples/reporting-print-export-report-without-showing-a-preview)
+* [How to Print and Export a Report in the ASP.NET Core Application without the Document Viewer](https://github.com/DevExpress-Examples/Reporting-AspNetCore-Print-Without-Preview)
+* [How to print and export DevExpress reports without previewing them on a web page in an ASP.NET Core Angular application](https://github.com/DevExpress-Examples/Reporting-Angular-Print-Without-Preview)

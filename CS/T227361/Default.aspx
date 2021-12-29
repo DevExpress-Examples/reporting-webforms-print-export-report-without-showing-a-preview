@@ -32,21 +32,19 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <table style="text-align: center">
-            <tr>
-                <td style="width: 150px">
-                    Printing
+        <table style="text-align: center" >
+            <tr">
+                <td style="background-color: #C0C0C0">Print
                 </td>
-                <td style="width: 150px" colspan="2">
-                    Exporting
+                <td style="background-color: #C0C0C0;" colspan="2">Export
                 </td>
             </tr>
             <tr>
-                   <td width="500px">
+                   <td style="border-style: none solid none none; border-width: 1px; width: 500px">
                         <input type="button" value="Print With iFrame" onclick="PrintWithiFrame(); return false;" /> <br />
                         <b>Note:</b> Printing with an invisible iFrame element is not recommended. Although this solution provides more desktop-like experience, it's not guaranteed to work reliably across all browsers. For example, it won't work in the Edge or Safary browser. <br />
                         <br />
-                        <input type="button" value="Print New Window" onclick="PrintInNewWindow(); return false;" /> <br />
+                        <input type="button" value="Print in New Window" onclick="PrintInNewWindow(); return false;" /> <br />
                         <b>Note:</b> clicking this button will open a separate tab in the browser. This is the recommented approach.
                         <iframe id="FrameToPrint" name="PrintingFrame" style="position:absolute; left: -10000px; top: -10000px;"></iframe>
                     </td>

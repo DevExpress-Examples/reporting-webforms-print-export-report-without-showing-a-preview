@@ -1,5 +1,7 @@
-﻿Namespace T227361
-    Partial Public Class ProductsReport
+Namespace T227361
+
+    Partial Class ProductsReport
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Designer generated code"
-
+'#Region "Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -45,22 +47,22 @@
             Me.tbProductData = New DevExpress.XtraReports.UI.XRTable()
             Me.nWindDataSet1 = New T227361.NWindDataSet()
             Me.productsTableAdapter = New T227361.NWindDataSetTableAdapters.ProductsTableAdapter()
-            DirectCast(Me.tbProductHeader, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.tbProductData, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.nWindDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.tbProductHeader), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.tbProductData), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.nWindDataSet1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me), System.ComponentModel.ISupportInitialize).BeginInit()
             ' 
             ' tbProductHeader
             ' 
             Me.tbProductHeader.LocationFloat = New DevExpress.Utils.PointFloat(0F, 0F)
             Me.tbProductHeader.Name = "tbProductHeader"
-            Me.tbProductHeader.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() { Me.trProductHeader})
+            Me.tbProductHeader.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.trProductHeader})
             Me.tbProductHeader.SizeF = New System.Drawing.SizeF(649.9999F, 25F)
             ' 
             ' GroupHeaderTitle
             ' 
-            Me.GroupHeaderTitle.Borders = (CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) Or DevExpress.XtraPrinting.BorderSide.Right) Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide))
-            Me.GroupHeaderTitle.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() { Me.tbProductHeader})
+            Me.GroupHeaderTitle.Borders = CType(((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Top) Or DevExpress.XtraPrinting.BorderSide.Right) Or DevExpress.XtraPrinting.BorderSide.Bottom)), DevExpress.XtraPrinting.BorderSide)
+            Me.GroupHeaderTitle.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.tbProductHeader})
             Me.GroupHeaderTitle.Font = New System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold)
             Me.GroupHeaderTitle.GroupUnion = DevExpress.XtraReports.UI.GroupUnion.WithFirstDetail
             Me.GroupHeaderTitle.HeightF = 25F
@@ -79,13 +81,13 @@
             ' 
             ' trProductHeader
             ' 
-            Me.trProductHeader.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() { Me.tcProductNameHeader, Me.tcUnitPriceHeader, Me.tcUnitsInStockHeader, Me.tcUnitsOnOrderHeader, Me.tcDiscontHeader})
+            Me.trProductHeader.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.tcProductNameHeader, Me.tcUnitPriceHeader, Me.tcUnitsInStockHeader, Me.tcUnitsOnOrderHeader, Me.tcDiscontHeader})
             Me.trProductHeader.Name = "trProductHeader"
             Me.trProductHeader.Weight = 1R
             ' 
             ' tcUnitsInStock
             ' 
-            Me.tcUnitsInStock.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Products.UnitsInStock")})
+            Me.tcUnitsInStock.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Products.UnitsInStock")})
             Me.tcUnitsInStock.Name = "tcUnitsInStock"
             Me.tcUnitsInStock.StylePriority.UseTextAlignment = False
             Me.tcUnitsInStock.Text = "tcUnitsInStock"
@@ -94,8 +96,8 @@
             ' 
             ' Detail
             ' 
-            Me.Detail.Borders = (CType(((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Right) Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide))
-            Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() { Me.tbProductData})
+            Me.Detail.Borders = CType((((DevExpress.XtraPrinting.BorderSide.Left Or DevExpress.XtraPrinting.BorderSide.Right) Or DevExpress.XtraPrinting.BorderSide.Bottom)), DevExpress.XtraPrinting.BorderSide)
+            Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.tbProductData})
             Me.Detail.HeightF = 25F
             Me.Detail.Name = "Detail"
             Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(4, 4, 0, 0, 100F)
@@ -118,13 +120,13 @@
             ' 
             ' ReportHeader
             ' 
-            Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() { Me.lbHeader})
+            Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.lbHeader})
             Me.ReportHeader.HeightF = 50F
             Me.ReportHeader.Name = "ReportHeader"
             ' 
             ' tcUnitsOnOrder
             ' 
-            Me.tcUnitsOnOrder.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Products.UnitsOnOrder")})
+            Me.tcUnitsOnOrder.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Products.UnitsOnOrder")})
             Me.tcUnitsOnOrder.Name = "tcUnitsOnOrder"
             Me.tcUnitsOnOrder.StylePriority.UseTextAlignment = False
             Me.tcUnitsOnOrder.Text = "tcUnitsOnOrder"
@@ -133,13 +135,13 @@
             ' 
             ' trProductData
             ' 
-            Me.trProductData.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() { Me.tcProductName, Me.tcUnitPrice, Me.tcUnitsInStock, Me.tcUnitsOnOrder, Me.tcDiscont})
+            Me.trProductData.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.tcProductName, Me.tcUnitPrice, Me.tcUnitsInStock, Me.tcUnitsOnOrder, Me.tcDiscont})
             Me.trProductData.Name = "trProductData"
             Me.trProductData.Weight = 1R
             ' 
             ' tcProductName
             ' 
-            Me.tcProductName.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Products.ProductName")})
+            Me.tcProductName.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Products.ProductName")})
             Me.tcProductName.Name = "tcProductName"
             Me.tcProductName.StylePriority.UseTextAlignment = False
             Me.tcProductName.Text = "tcProductName"
@@ -166,7 +168,7 @@
             ' 
             ' tcUnitPrice
             ' 
-            Me.tcUnitPrice.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Products.UnitPrice", "{0:c}")})
+            Me.tcUnitPrice.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Products.UnitPrice", "{0:c}")})
             Me.tcUnitPrice.Name = "tcUnitPrice"
             Me.tcUnitPrice.StylePriority.UseTextAlignment = False
             Me.tcUnitPrice.Text = "tcUnitPrice"
@@ -181,7 +183,7 @@
             ' 
             ' tcDiscont
             ' 
-            Me.tcDiscont.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() { New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Products.Discontinued")})
+            Me.tcDiscont.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Nothing, "Products.Discontinued")})
             Me.tcDiscont.Name = "tcDiscont"
             Me.tcDiscont.StylePriority.UseTextAlignment = False
             Me.tcDiscont.Text = "tcDiscont"
@@ -204,7 +206,7 @@
             ' 
             Me.tbProductData.LocationFloat = New DevExpress.Utils.PointFloat(0F, 0F)
             Me.tbProductData.Name = "tbProductData"
-            Me.tbProductData.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() { Me.trProductData})
+            Me.tbProductData.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.trProductData})
             Me.tbProductData.SizeF = New System.Drawing.SizeF(649.9999F, 25F)
             ' 
             ' nWindDataSet1
@@ -218,42 +220,60 @@
             ' 
             ' ProductsReport
             ' 
-            Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() { Me.Detail, Me.TopMargin, Me.BottomMargin, Me.GroupHeaderTitle, Me.ReportHeader})
+            Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.GroupHeaderTitle, Me.ReportHeader})
             Me.DataAdapter = Me.productsTableAdapter
             Me.DataMember = "Products"
             Me.DataSource = Me.nWindDataSet1
             Me.Version = "14.1"
-            DirectCast(Me.tbProductHeader, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.tbProductData, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.nWindDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me, System.ComponentModel.ISupportInitialize).EndInit()
-
+            CType((Me.tbProductHeader), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.tbProductData), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.nWindDataSet1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me), System.ComponentModel.ISupportInitialize).EndInit()
         End Sub
 
-        #End Region
-
+'#End Region
         Private tbProductHeader As DevExpress.XtraReports.UI.XRTable
-        Private trProductHeader As DevExpress.XtraReports.UI.XRTableRow
-        Private tcProductNameHeader As DevExpress.XtraReports.UI.XRTableCell
-        Private tcUnitPriceHeader As DevExpress.XtraReports.UI.XRTableCell
-        Private tcUnitsInStockHeader As DevExpress.XtraReports.UI.XRTableCell
-        Private tcUnitsOnOrderHeader As DevExpress.XtraReports.UI.XRTableCell
-        Private tcDiscontHeader As DevExpress.XtraReports.UI.XRTableCell
-        Private GroupHeaderTitle As DevExpress.XtraReports.UI.GroupHeaderBand
-        Private tcUnitsInStock As DevExpress.XtraReports.UI.XRTableCell
-        Private Detail As DevExpress.XtraReports.UI.DetailBand
-        Private tbProductData As DevExpress.XtraReports.UI.XRTable
-        Private trProductData As DevExpress.XtraReports.UI.XRTableRow
-        Private tcProductName As DevExpress.XtraReports.UI.XRTableCell
-        Private tcUnitPrice As DevExpress.XtraReports.UI.XRTableCell
-        Private tcUnitsOnOrder As DevExpress.XtraReports.UI.XRTableCell
-        Private tcDiscont As DevExpress.XtraReports.UI.XRTableCell
-        Private ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
-        Private lbHeader As DevExpress.XtraReports.UI.XRLabel
-        Private BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
-        Private TopMargin As DevExpress.XtraReports.UI.TopMarginBand
-        Private nWindDataSet1 As NWindDataSet
-        Private productsTableAdapter As NWindDataSetTableAdapters.ProductsTableAdapter
 
+        Private trProductHeader As DevExpress.XtraReports.UI.XRTableRow
+
+        Private tcProductNameHeader As DevExpress.XtraReports.UI.XRTableCell
+
+        Private tcUnitPriceHeader As DevExpress.XtraReports.UI.XRTableCell
+
+        Private tcUnitsInStockHeader As DevExpress.XtraReports.UI.XRTableCell
+
+        Private tcUnitsOnOrderHeader As DevExpress.XtraReports.UI.XRTableCell
+
+        Private tcDiscontHeader As DevExpress.XtraReports.UI.XRTableCell
+
+        Private GroupHeaderTitle As DevExpress.XtraReports.UI.GroupHeaderBand
+
+        Private tcUnitsInStock As DevExpress.XtraReports.UI.XRTableCell
+
+        Private Detail As DevExpress.XtraReports.UI.DetailBand
+
+        Private tbProductData As DevExpress.XtraReports.UI.XRTable
+
+        Private trProductData As DevExpress.XtraReports.UI.XRTableRow
+
+        Private tcProductName As DevExpress.XtraReports.UI.XRTableCell
+
+        Private tcUnitPrice As DevExpress.XtraReports.UI.XRTableCell
+
+        Private tcUnitsOnOrder As DevExpress.XtraReports.UI.XRTableCell
+
+        Private tcDiscont As DevExpress.XtraReports.UI.XRTableCell
+
+        Private ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
+
+        Private lbHeader As DevExpress.XtraReports.UI.XRLabel
+
+        Private BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
+
+        Private TopMargin As DevExpress.XtraReports.UI.TopMarginBand
+
+        Private nWindDataSet1 As T227361.NWindDataSet
+
+        Private productsTableAdapter As T227361.NWindDataSetTableAdapters.ProductsTableAdapter
     End Class
 End Namespace

@@ -1,37 +1,33 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Linq
+Imports System
 Imports System.Web
-Imports System.Web.UI
 Imports System.Web.UI.WebControls
 Imports DevExpress.XtraReports.UI
 Imports System.IO
 Imports DevExpress.XtraPrinting
 
 Namespace T227361
-    Partial Public Class [Default]
-        Inherits System.Web.UI.Page
 
-        Private Sub WriteDocumentToResponse(ByVal documentData() As Byte, ByVal format As String, ByVal isInline As Boolean, ByVal fileName As String)
+    Public Partial Class [Default]
+        Inherits UI.Page
 
-            Dim contentType_Renamed As String
+        Private Sub WriteDocumentToResponse(ByVal documentData As Byte(), ByVal format As String, ByVal isInline As Boolean, ByVal fileName As String)
+            Dim contentType As String
             Dim disposition As String = If(isInline, "inline", "attachment")
-
             Select Case format.ToLower()
                 Case "xls"
-                    contentType_Renamed = "application/vnd.ms-excel"
+                    contentType = "application/vnd.ms-excel"
                 Case "xlsx"
-                    contentType_Renamed = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                    contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 Case "mht"
-                    contentType_Renamed = "message/rfc822"
+                    contentType = "message/rfc822"
                 Case "html"
-                    contentType_Renamed = "text/html"
+                    contentType = "text/html"
                 Case "txt", "csv"
-                    contentType_Renamed = "text/plain"
+                    contentType = "text/plain"
                 Case "png"
-                    contentType_Renamed = "image/png"
+                    contentType = "image/png"
                 Case Else
-                    contentType_Renamed = String.Format("application/{0}", format)
+                    contentType = String.Format("application/{0}", format)
             End Select
 
             Response.Clear()
@@ -42,11 +38,11 @@ Namespace T227361
         End Sub
 
         Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
-            Dim printFlag As Boolean = Nothing
-            If Request.QueryString("Print") IsNot Nothing AndAlso Boolean.TryParse(CStr(Request.QueryString("Print")), printFlag) AndAlso printFlag Then
+            Dim printFlag As Boolean
+            If Not Equals(Request.QueryString("Print"), Nothing) AndAlso Boolean.TryParse(CStr(Request.QueryString("Print")), printFlag) AndAlso printFlag Then
                 'Printing
                 Dim report As XtraReport = New ProductsReport()
-                Using ms As New MemoryStream()
+                Using ms As MemoryStream = New MemoryStream()
                     report.ExportToPdf(ms, New PdfExportOptions() With {.ShowPrintDialogOnOpen = True})
                     WriteDocumentToResponse(ms.ToArray(), "pdf", True, "Report.pdf")
                 End Using
@@ -56,11 +52,9 @@ Namespace T227361
         Protected Sub btExport_Click(ByVal sender As Object, ByVal e As EventArgs)
             'Exporting
             Dim report As XtraReport = New ProductsReport()
-
             Dim format As String = ddlExportFormat.SelectedValue
             Dim fileName As String = String.Format("Report.{0}", format)
-
-            Using ms As New MemoryStream()
+            Using ms As MemoryStream = New MemoryStream()
                 Select Case format
                     Case "pdf"
                         report.ExportToPdf(ms)
@@ -83,6 +77,7 @@ Namespace T227361
                     Case Else
                         Return
                 End Select
+
                 WriteDocumentToResponse(ms.ToArray(), format, False, fileName)
             End Using
         End Sub

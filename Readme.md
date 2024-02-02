@@ -22,7 +22,7 @@ To print the report, export it to the PDF format. Then write the PDF stream to t
 
 ## Documentation
 
-[Print and Export Reports without a Preview in ASP.NET Web Forms Applications](https://docs.devexpress.com/XtraReports/401846)
+- [Printing and Export in Reporting Tools for Web](https://docs.devexpress.com/XtraReports/404502/web-reporting/common-features/printing#print-and-export-reports-without-a-preview)
 
 ## More Examples
 

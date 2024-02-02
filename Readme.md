@@ -13,16 +13,14 @@ The report uses one of the **ExportTo...** methods to export a report document 
 
 To print the report, export it to the PDF format. Then write the PDF stream to the page's **Response** with the **Content-Disposition** header set to the "inline" value. The browser's built-in PDF viewer opens the PDF file. An alternative method exports the PDF to a separate iframe. In this case, only the print dialog is displayed.
 
-
 ## Files to Look At
 
 - [Default.aspx.cs](CS/T227361/Default.aspx.cs) (VB: [Default.aspx.vb](VB/T227361/Default.aspx.vb))
 - [Default.aspx](CS/T227361/Default.aspx) (VB: [Default.aspx](VB/T227361/Default.aspx))
 
-
 ## Documentation
 
-- [Printing and Export in Reporting Tools for Web](https://docs.devexpress.com/XtraReports/404502/web-reporting/common-features/printing#print-and-export-reports-without-a-preview)
+- [Printing and Export in Reporting Tools for Web](https://docs.devexpress.com/XtraReports/404502/web-reporting/common-features/printing)
 
 ## More Examples
 
